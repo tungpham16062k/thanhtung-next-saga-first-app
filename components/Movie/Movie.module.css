@@ -1,0 +1,43 @@
+.item {
+  margin-top: 16px;
+  width: 100%;
+  min-width: 400px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid rgba(0,0,0, 0.2);
+  padding: 8px 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item:first-child {
+  margin-top: 0;
+}
+.item:hover {
+  border: 1px solid rgb(0,112, 243);
+  transition: hover 0.1s ease;
+}
+.name {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+.viName {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 11px;
+  color: #444;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px; 
+  cursor: pointer;
+} 
+/* .icon:hover {
+  background-color: rgba(0,0,0, 0.1);
+  border-radius: 50%;
+} */
