@@ -43,13 +43,14 @@ function Form(props) {
   return (
     <div className={styles.form}>
       <h2 className={styles.title}>Cập nhật phim</h2>
+      <p style={{ margin: 0 }}>{movieData?.name}</p>
       <div className={styles.formGroup}>
         <span className={styles.formLabel}>Tên tiếng anh</span>
-        <input disabled={movieData?.name ? false : true} spellCheck={false} name='name' onChange={(e) => setNameField(e.target.value)} value={nameField} className={styles.formControl} type='text' />
+        <input disabled={movieData?.name && movieData?.viName ? false : true} spellCheck={false} name='name' onChange={(e) => setNameField(e.target.value)} value={nameField} className={styles.formControl} type='text' />
       </div>
       <div className={styles.formGroup}>
         <span className={styles.formLabel}>Tên tiếng việt</span>
-        <input disabled={movieData?.viName ? false : true} spellCheck={false} name='viName' value={viNameField} onChange={(e) => setViNameField(e.target.value)} className={styles.formControl} type='text' />
+        <input disabled={movieData?.name && movieData?.viName ? false : true} spellCheck={false} name='viName' value={viNameField} onChange={(e) => setViNameField(e.target.value)} className={styles.formControl} type='text' />
       </div>
       <button disabled={nameField && viNameField ? false : true} className={styles.button} onClick={handleUpdateMovie}>Cập nhật</button>
     </div>
